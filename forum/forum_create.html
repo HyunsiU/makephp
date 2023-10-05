@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            게시판 작성
+        </title>
+        <link href="forum.css" rel="stylesheet" type="text/css"/>
+        <style>
+            img {
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../main.png">
+        <div class="WritingWarp">
+            <div class="WritingHeader">
+                <h1>글쓰기</h1>
+            </div>
+            <div class="WritingEditor">
+                <form method="post", action="forum_create.php">
+                    <p><textarea placeholder="제목을 입력하세요" cols="135" rows="2" name="title"></textarea></p>
+                    <p><textarea placeholder="비밀번호 입력하세요" cols="135" rows="2" name="password"></textarea></p>
+                    <textarea placeholder="내용을 입력하세요" cols="135" rows="100" name="content"></textarea>
+                    <input type="submit" value="작성">
+                </form>
+                
+            </div>
+            
+        </div>
+        <form method="post" action="forum_create.php">
+
+        </form>
+    </body>
+</html>

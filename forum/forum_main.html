@@ -1,0 +1,41 @@
+
+<html>
+
+<head>
+    <title>
+        4실 5조 게시판
+    </title>
+    <meta charset="utf-8">
+    <style>
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <link href="forum.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <img src="../main.png">
+    <div class="main">
+        
+        <div class="post-list">
+            <h1>게시글 목록</h1>
+            <?php
+                include 'forum_main.php';
+            ?>
+        <form action="forum_create.html" class="button">
+            <input type="submit" value="글쓰기">
+        </form>
+        </div>
+        
+        
+
+    </div>
+    
+    
+    
+</body>
+
+</html>

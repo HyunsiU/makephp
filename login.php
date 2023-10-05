@@ -1,22 +1,25 @@
 <?php
-    $ID = $_POST['ID'];
-    $PW = md5($_POST['PW']);
-    $con = mysqli_connect("localhost", "root", "", "login") or die ("Can't access DB");;
-    $sql = "SELECT *  FROM `info` WHERE `ID` LIKE '".$ID."'";
-    $result = mysqli_query($con, $sql);
+    include "db_conn.php";
 
-    $rows = mysqli_fetch_array($result);
+    $id = $_POST['id'];
+    $pw = $_POST['pw'];
 
-    if($rows){
-        if($rows['ID'] == $ID && $rows['PW'] == $PW){
-            print("완성");
-        } else {
-            echo "Welcome! but this site has NOT data :( just Enjoy!";
+    $sql = "SELECT * FROM users WHERE username='".$id."'";    
+    $result = $conn->query($sql);
+    $row = $result->fetch_array();
+
+
+    if($row != null){
+        if($row['password'] == $pw){
+            ?><script> alert('로그인 완료 '); location.href="../forum/forum_main.html";</script><?php
+            
+        } else{
+            ?><script> alert('로그인 실패 '); location.href="..";</script><?php
         }
     }else{
-        echo "Welcome! but this site has NOT data :( just Enjoy!";
+        ?><script> alert('로그인 실패 '); location.href="..";</script><?php
     }
-     
 
-    
+
+
 ?>
