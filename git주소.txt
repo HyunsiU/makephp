@@ -1,0 +1,9 @@
+https://github.com/HyunsiU/makephp
+
+게시판에 있어야 할 기능:
+조회수
+제목
+내용 일기
+좋아요
+싫어요
+업로드
